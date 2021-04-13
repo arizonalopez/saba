@@ -1,0 +1,7 @@
+.content {
+    background-color: aliceblue;
+    background-image: url(Libraries\Documents\sam.jpg);
+}
+.right {
+    float: right;
+}

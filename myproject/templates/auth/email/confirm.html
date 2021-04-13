@@ -1,0 +1,4 @@
+<p>Dear {{ user.username }}</p>
+<p>Welcome to flasky!<br>
+To confirm your account please click on the following link:<a href="{{ url_for('auth.confirm', token=token, _external=True) }}">Click Here</a></p>
+<p>Thanks</p>

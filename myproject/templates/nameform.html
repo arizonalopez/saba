@@ -1,0 +1,28 @@
+{% extends "index.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% import "_macros.html" as macros %}
+{% block title %}Flasky{% endblock %}
+{% block scripts %}
+{{ super() }}
+{{ pagedown.include_pagedown() }}
+{% endblock %}
+{% block page_content %}
+<div>
+    {% if current_user.can(Permission.WRITE) %}
+    {{ wtf.quick_form(form) }}
+</div>
+<div class="page-footer">
+    <a href="{{ url_for('.show_all') }}">
+        <span class="label label-default">All</span></a>
+    <a href="{{ url_for('.show_followed') }}">
+            <span class="label label-default">Followed</span></a>
+</div>
+{% include '_posts.html' %}
+<div class="pagination">
+    {{ macros.pagination_widget(pagination, '.index') }}
+</div>
+{% endif %}
+<div style="border: 25px beige solid; font-size: large; text-align: center;">
+    Copyright 2019 - {{ moment(current_time).format('YYYY') }}
+</div>
+{% endblock %}
