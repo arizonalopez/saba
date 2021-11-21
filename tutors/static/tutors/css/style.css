@@ -1,0 +1,31 @@
+.date {
+    background-color: chocolate;
+    width: fit-content;
+}
+body {
+    background-color: brown;
+    background: url('/static/tutors/css/NIGERIA.jpg') no-repeat;
+}
+h1 {
+    text-align: center;
+    color: darkgrey;
+}
+come {
+    border: solid 15px burlywood;
+}
+img {
+    float: right;
+}
+
+.peek {
+    text-align: center;
+}
+
+
+.corporate-jumbo {
+    background: url("static/tutors/image/banner.jpg") no-repeat center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
+    color: burlywood;
+}
