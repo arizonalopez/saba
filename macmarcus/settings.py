@@ -23,11 +23,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '076mhd*iysh0dj8_i)^%i&^3jo9l^&1p2nh4h70=^wt-)8^i)z'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-TEMPLATE_DEBUG = True
+TEMPLATE_DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['arizonlop.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
