@@ -1,5 +1,6 @@
 {% extends "tutors/base.html" %}
 {% load crispy_forms_tags %}
+{% block title %}{{ block.super }}Register{% endblock %}
 {% comment %}
 This is the register page
 {% endcomment %}
@@ -9,7 +10,7 @@ This is the register page
 {% block content %}
 <p>Register: </p>
 <div>
-<form action="{% url 'register' %}" method='post' class='col-lg-4'>
+<form action="{% url 'register' %}" method='post' class='col-md-4'>
     {% csrf_token %}
     {{ form|crispy }}
     <button class='btn btn-outline-info' name='submit'>Sign Up</button>

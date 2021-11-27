@@ -1,14 +1,19 @@
 {% extends 'tutors/base.html' %}
+{% block title %}{{ block.super }}<title>About</title>{% endblock %}
 {% block content %}
-<div class='come'>
-<p>Contact Us at 86, Isolo Street, Akure, Ondo State</p>
+<div class='text-right lead'>
+<address>
+  <strong>Macmarcus Coaching Tutors.</strong><br>
+  Along Iya Saheed Alamala<br>
+  Isolo, Akure<br>
+  <abbr title="Phone">P:</abbr> 07032880291
+</address>
 </div>
+<blockquote class='blockquote-reverse'>
+  <p>Out of the Night that covers me, black as the pit from pole to pole</p>
+  <footer>Nelson Mandela <cite title="Pollsmor">Pollsmor Prison</cite></footer>
+</blockquote>
 {% endblock content %}
-{% block footer %}
-<div>
-{% include 'tutors/_footer.html' %}
-</div>
-{% endblock footer %}
 {% block scripts %}
   <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
   <script>
@@ -33,4 +38,9 @@
 
    google.maps.event.addDomListener(window, 'load', init_map);
   </script>
-{% endblock scripts %}
+{% endblock %}
+{% block footer %}
+<div>
+{% include 'tutors/_footer.html' %}
+</div>
+{% endblock footer %}

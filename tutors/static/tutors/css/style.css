@@ -4,7 +4,7 @@
 }
 body {
     background-color: brown;
-    background: url('/static/tutors/css/NIGERIA.jpg') no-repeat;
+    background: url('/static/tutors/css/NIGERIA.jpg') no-repeat center center;
 }
 h1 {
     text-align: center;
@@ -28,4 +28,8 @@ img {
     -webkit-background-size: cover;
     background-size: cover;
     color: burlywood;
+}
+
+.mark {
+    display: inline-table;
 }
