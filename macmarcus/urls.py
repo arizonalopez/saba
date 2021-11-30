@@ -55,4 +55,4 @@ urlpatterns = [
 
 
 handler404 = 'tutors.views.view_404'
-handler403 = 'tutors.views.response_error_handler'
+handler500 = 'tutors.views.view_500'

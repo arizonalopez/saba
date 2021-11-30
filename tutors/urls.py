@@ -20,3 +20,4 @@ urlpatterns = [
     path('json/', PublicJSON.as_view())
 ]
 
+

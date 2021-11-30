@@ -49,6 +49,8 @@ def login(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
+            if request.GET.get('next') is not None:
+                return redirect(request.GET['next'])
             messages.success(request, 'Login successful!')
             return redirect('about')
         else:
@@ -197,8 +199,12 @@ def viral_video_detail(request, id):
         request, 'lopez/viral_video.html', {'video': video}
     )
 
-def view_404(request, exception=None):
-    return render(request, 'tutors/404.html')
+def view_404(request, exception):
+    return render(request, 'tutors/404.html', {})
+
+
+def view_500(request, exception=None):
+    return render(request, 'tutors/404.html', {})
 
 
 
